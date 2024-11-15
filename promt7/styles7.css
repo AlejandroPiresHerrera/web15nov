@@ -1,0 +1,166 @@
+/* Carrusel de imágenes */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%; /* Tres imágenes, cada una ocupa un 33.3333% */
+    animation: slide 15s infinite; /* Animación infinita con un tiempo de 9 segundos */
+}
+
+.carousel-images img {
+    width: 33.3333%; /* Cada imagen ocupa un tercio del contenedor */
+    height: 100%; /* Asegura que las imágenes cubran el alto completo */
+    object-fit: cover; /* Asegura que las imágenes se mantengan proporcionales y cubran el área */
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-66.66%);
+    }
+    66.66% {
+        transform: translateX(0);
+    }
+    99.99% {
+        transform: translateX(0); /* Vuelve a la primera imagen al final */
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logo-img {
+    width: 120px; /* Tamaño reducido del logo */
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo para las Cards */
+.cards {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las cards */
+    align-items: stretch; /* Estira las cards para que ocupen el mismo alto */
+    gap: 20px;
+    margin-top: 50px;
+    height: 100vh; /* Altura de la página completa */
+}
+
+.card {
+    width: 32%; /* Hacemos las cards más anchas */
+    height: 100%; /* Las cards ocupan el 100% de la altura */
+    perspective: 1000px; /* Efecto 3D */
+    display: flex;
+    flex-direction: column; /* Permite que las imágenes y el contenido se alineen en columna */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s; /* Transición suave */
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Efecto de giro al hacer hover */
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ocultar la parte trasera al girar */
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    transform: rotateY(180deg); /* Volteo de la parte posterior */
+}
+
+/* Estilo para las secciones */
+.gallery-title, .disfrutar-titulo, .contacto {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gallery-title h2, .disfrutar-titulo h2 {
+    font-size: 28px;
+}
+
+.contacto {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.contacto form {
+    text-align: center;
+}
+
+.contacto input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #555;
+}

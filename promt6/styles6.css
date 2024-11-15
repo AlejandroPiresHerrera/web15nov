@@ -1,0 +1,112 @@
+/* styles.css */
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    margin: 15px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Estilos para el contenedor de las cards */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que las cards se ajusten a nuevas filas si el espacio lo requiere */
+}
+
+/* Estilos para cada card */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Cada card tomará el 30% del ancho del contenedor */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen dentro de las cards */
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Contenido dentro de las cards */
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Efecto hover en las cards */
+.card:hover {
+    transform: translateY(-5px); /* Eleva la card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* En móviles, las cards se apilan verticalmente */
+        align-items: center;
+    }
+
+    .card {
+        width: 80%; /* Las cards ocuparán el 80% del ancho del contenedor */
+        margin-bottom: 20px;
+    }
+}

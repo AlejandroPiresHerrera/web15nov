@@ -1,0 +1,71 @@
+/* estilos.css */
+
+/* Estilos generales para móviles (por defecto) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.contenido {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+    header {
+        text-align: left;
+        padding: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .contenido {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenido {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}

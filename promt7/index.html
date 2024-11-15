@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería y Cards con Flexbox</title>
+    <link rel="stylesheet" href="styles7.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.dinopolis.com/uploads/dinopolis/contenidos/612_logo-hz-20-aniversario-dinopolis.jpg" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li> <!-- Enlace a la sección de Servicios -->
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li> <!-- Enlace a la sección de Contacto -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrusel de imágenes -->
+        <section class="carousel">
+            <div class="carousel-images">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Din%C3%B3polis_Teruel.jpg" alt="Imagen 1">
+                <img src="https://estaticos-cdn.prensaiberica.es/clip/0350a1c2-cd44-4513-a821-d0d8b137933f_16-9-discover-aspect-ratio_default_0.jpg" alt="Imagen 2">
+                <img src="https://casarurallasmasadas.com/wp-content/uploads/2023/03/Dinopolis-1-1024x768.jpg" alt="Imagen 3">
+            </div>
+        </section>
+
+        <!-- Título de las Cards -->
+        <section id="services" class="disfrutar-titulo"> <!-- id agregado para anclaje -->
+            <h2>PODRÁS DISFRUTAR DE...</h2>
+        </section>
+
+        <!-- Sección de Cards -->
+        <section class="cards">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://www.teruelenlared.com/imagenes/el-ultimo-minuto-dinopolis.jpg" alt="Card 1">
+                    </div>
+                    <div class="card-back">
+                        <h3>Recorridos temáticos</h3>
+                        <p>Viaje en el tiempo, recorrido sobre la historia del homo en barca y mar jurásico.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://agendadeisa.com/wp-content/uploads/elementor/thumbs/T-rex-Show-1-scaled-qltknzorswqsb3g2cghh607tnr71d9pg5c227knups.jpg" alt="Card 2">
+                    </div>
+                    <div class="card-back">
+                        <h3>MUSEO PALEONTOLÓGICO</h3>
+                        <p>Contamos con sorprendentes: SALA MUNDO ACUÁTICO, SALA DE LOS DINOSAURIOS, SALA DE MAMÍFEROS.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://s.libertaddigital.com/fotos/noticias/dinopolis3d.jpg" alt="Card 3">
+                    </div>
+                    <div class="card-back">
+                        <h3>SIMULADOR 4D Y CINE 3D</h3>
+                        <p>¡¡ Siéntate y disfruta de la aventura en cuatro dimensiones con "DinoSafari 2".</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Recibir información sobre entradas y abonos</h2>
+        <form action="#" method="POST">
+            <label for="email">Introduce tu correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="tu-email@dominio.com">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

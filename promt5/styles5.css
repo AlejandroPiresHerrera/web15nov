@@ -1,0 +1,73 @@
+/* styles.css */
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    margin: 15px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Estilos para la galería */
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a nuevas filas si es necesario */
+}
+
+.imagen {
+    flex: 1; /* Las imágenes tomarán el mismo ancho */
+    max-width: 300px; /* Limita el tamaño máximo de las imágenes */
+    text-align: center; /* Centra las imágenes dentro de sus contenedores */
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

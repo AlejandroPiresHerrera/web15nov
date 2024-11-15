@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Estilos generales para dispositivos móviles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para la galería */
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query para pantallas de al menos 768px (tabletas) */
+@media (min-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media query para pantallas de al menos 1024px (pantallas grandes) */
+@media (min-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
